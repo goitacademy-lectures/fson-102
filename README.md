@@ -1,2 +1,3 @@
 # fson-102
-HTML &amp; CSS lessons for Fullstack
+
+Theoretical and practical classes (module HTML & CSS)
