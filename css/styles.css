@@ -1,0 +1,163 @@
+/* Base styles */
+body {
+  color: #111111;
+  background-color: #fafafa;
+}
+
+/* Reset styles */
+
+/* Common styles */
+.accent {
+}
+.socials {
+}
+.socials-item {
+}
+.socials-link {
+}
+.socials-icon {
+}
+
+/* Header section */
+.header {
+}
+.header-nav {
+}
+.header-logo {
+}
+.header-logo-accent {
+}
+.header-logo-img {
+}
+.header-list {
+}
+.header-item {
+}
+.header-link {
+}
+
+/* Hero section */
+.hero {
+}
+.hero-title {
+}
+.hero-list {
+}
+.hero-item {
+}
+.hero-btn {
+}
+.hero-scroll {
+}
+
+/* Features section */
+.features {
+}
+.features-list {
+}
+.features-item {
+}
+.features-caption {
+}
+.features-desc {
+}
+
+/* Ingridients section */
+.ingridients {
+}
+.ingridients-title {
+}
+.ingridients-list {
+}
+.ingridients-item {
+}
+.ingridients-pic {
+}
+.ingridients-caption {
+}
+
+/* Made section */
+.made {
+}
+.made-title {
+}
+.made-img {
+}
+.made-subtitle {
+}
+.made-list {
+}
+.made-item {
+}
+
+/* Products section */
+.products {
+}
+.products-title {
+}
+.products-list {
+}
+.products-item {
+}
+.products-pic {
+}
+.products-caption {
+}
+.products-desc {
+}
+.products-btn {
+}
+
+/* Bestsellers section */
+.bestsellers {
+}
+.bestsellers-title {
+}
+.bestsellers-list {
+}
+.bestsellers-item {
+}
+.bestsellers-pic {
+}
+.bestsellers-caption {
+}
+
+/* Reviews section */
+.reviews {
+}
+.reviews-title {
+}
+.reviews-list {
+}
+.reviews-item {
+}
+.reviews-avatar {
+}
+.reviews-user {
+}
+.reviews-message {
+}
+
+/* Footer section */
+.footer {
+}
+.footer-slogan {
+}
+.footer-caption {
+}
+.footer-socials {
+}
+.footer-address {
+}
+.footer-address-list {
+}
+.footer-address-item {
+}
+.footer-address-link {
+}
+.footer-menu {
+}
+.footer-menu-item {
+}
+.footer-menu-link {
+}
