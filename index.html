@@ -6,17 +6,19 @@
     <meta
       name="description"
       content="Treat yourself or a loved one to our finest ingredients for a moment of pure delight!" />
-    <title>Simply Chokolate</title>
+    <title>Simply Chocolate</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="./images/logo.svg" type="image/svg" />
-    <!-- Critical CSS -->
-    <!-- <style>
-      a {
-        color: lightgreen;
-        text-decoration: none;
-      }
-    </style> -->
-
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      rel="stylesheet" />
+    <!-- Normalize -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css" />
     <!-- Custom style -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
@@ -107,10 +109,12 @@
 
         <ul class="hero-list">
           <li class="hero-item">
-            <button class="hero-btn" type="button">Buy now</button>
+            <button class="hero-btn primary" type="button">Buy now</button>
           </li>
           <li class="hero-item">
-            <button class="hero-btn" type="button">How it’s made</button>
+            <button class="hero-btn secondary" type="button">
+              How it’s made
+            </button>
           </li>
         </ul>
 
@@ -231,29 +235,32 @@
           alt=""
           width="600"
           height="400" />
-        <h3 class="made-subtitle">
-          Try our chocolates today and discover the perfect balance of flavor
-        </h3>
-        <ol class="made-list">
-          <li class="made-item">
-            Heat the milk in a saucepan without bringing it to a boil. Add sugar
-            and cocoa powder.
-          </li>
-          <li class="made-item">
-            At the same time, prepare a water bath. Melt the butter on it.
-          </li>
-          <li class="made-item">
-            "Mix" the milk mixture and already liquid butter. Mix thoroughly
-            with a silicone spatula so that the mass becomes uniform and silky.
-          </li>
-          <li class="made-item">
-            Heat the mixture over low heat, letting it barely boil.
-          </li>
-          <li class="made-item">
-            Pour the chocolate into special containers (can be replaced with ice
-            molds). Allow to cool and harden.
-          </li>
-        </ol>
+        <div class="made-right-side">
+          <h3 class="made-subtitle">
+            Try our chocolates today and discover the perfect balance of flavor
+          </h3>
+          <ol class="made-list">
+            <li class="made-item">
+              Heat the milk in a saucepan without bringing it to a boil. Add
+              sugar and cocoa powder.
+            </li>
+            <li class="made-item">
+              At the same time, prepare a water bath. Melt the butter on it.
+            </li>
+            <li class="made-item">
+              "Mix" the milk mixture and already liquid butter. Mix thoroughly
+              with a silicone spatula so that the mass becomes uniform and
+              silky.
+            </li>
+            <li class="made-item">
+              Heat the mixture over low heat, letting it barely boil.
+            </li>
+            <li class="made-item">
+              Pour the chocolate into special containers (can be replaced with
+              ice molds). Allow to cool and harden.
+            </li>
+          </ol>
+        </div>
       </section>
       <!-- Products section -->
       <section class="products">
@@ -432,7 +439,7 @@
             </p>
           </li>
         </ul>
-        <button type="button">Leave a review</button>
+        <button class="reviews-btn" type="button">Leave a review</button>
       </section>
     </main>
 
