@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+
+  /* color: red; */
+}
+p {
+  margin: 0;
+}
+section {
+  outline: 2px solid red;
+  outline-offset: -2px;
+
+  margin-bottom: 50px;
+}
+article {
+  margin-top: 150px;
+
+  outline: 2px solid lightseagreen;
+  outline-offset: -2px;
+}
+.text-second {
+  width: 500px;
+  padding: 20px;
+  border: 2px solid lightgreen;
+  border-radius: 10px;
+}
+
+.text-bounds,
+.text-bounds-1 {
+  width: 500px;
+
+  margin-bottom: 50px;
+  padding: 20px;
+  border: 2px dashed hotpink;
+  border-radius: 20px;
+
+  /* padding: 16px 32px; */
+  /* padding-left: 40px;
+  padding-top: 150px; */
+
+  /* margin-left: auto; */
+
+  /* border-top: 20px solid red;
+  border-bottom: 10px dashed blueviolet;
+  border-right: 8px dotted lightblue; */
+}
+
+.text-bounds {
+  /* outline: 2px solid red; */
+  outline-offset: -2px;
+}
+
+ul {
+  padding: 30px;
+}
+.list-bounds {
+  outline: 2px solid darkblue;
+  outline-offset: -2px;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+
+  background-color: lightgreen;
+}
+
+button {
+  border: 0;
+  border: none;
+}
