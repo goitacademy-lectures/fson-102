@@ -3,39 +3,58 @@ body {
   font-family: 'Montserrat', sans-serif;
   color: #111111;
   background-color: #fafafa;
-
-  /* Default values */
-  /* font-size: 16px;
-  font-weight: 400;
-  font-style: normal;
-  color: black;
-  background-color: white; */
 }
 
 /* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-
 a {
   color: currentColor;
   text-decoration: none;
 }
-
 button {
   font-family: inherit;
   color: currentColor;
   background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
 /* Common styles */
+.container {
+  width: 1168px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+
+  outline: 2px solid red;
+  outline-offset: -2px;
+}
+
 .ingridients-title,
 .made-title,
 .products-title,
 .bestsellers-title,
 .reviews-title {
+  width: 412px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-size: 24px;
   font-weight: 600;
   line-height: 1.17;
@@ -91,6 +110,9 @@ button {
   background-color: rgba(17, 17, 17, 0.7);
 }
 .hero-title {
+  width: 484px;
+  margin-bottom: 32px;
+
   font-size: 28px;
   font-weight: 500;
   line-height: 1.21;
