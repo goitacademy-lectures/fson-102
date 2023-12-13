@@ -103,14 +103,17 @@ button {
   width: 40px;
   height: 40px;
 
+  color: #111111;
   border-radius: 10px;
   border: 1px solid rgba(17, 17, 17, 0.1);
 }
 .socials-link:hover,
 .socials-link:focus {
+  color: #fd9222;
   border-color: rgba(253, 146, 34, 0.1);
 }
 .socials-icon {
+  fill: currentColor;
 }
 /* Header section */
 .header {
@@ -172,17 +175,47 @@ button {
 .header-link:focus {
   color: #fd9222;
 }
+.header-link.active {
+  color: #fd9222;
+}
+
+.header-link.active::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #fd9222;
+}
 
 /* Hero section */
 .hero {
   padding-bottom: 80px;
 }
+
 .hero-container {
   padding: 40px;
   padding-top: 381px;
 
-  background-color: rgba(17, 17, 17, 0.7);
   border-radius: 30px;
+  background-color: rgba(17, 17, 17, 0.7);
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.3),
+      rgba(17, 17, 17, 0.3)
+    ),
+    url(../images/hero/hero-bg.jpg);
+  /* Repeating gradient */
+  /* background-image: repeating-linear-gradient(
+    to right,
+    blueviolet,
+    blueviolet 20px,
+    hotpink 20px,
+    hotpink 40px
+  ); */
+  /* background-position: left calc(50% + 200px) top calc(50% - 100px); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   width: 484px;
@@ -254,12 +287,17 @@ button {
   width: 38px;
   height: 38px;
 
+  color: #fd9222;
   background-color: #fff;
   border-radius: 50%;
 }
 .hero-scroll:hover .hero-icon,
 .hero-scroll:focus .hero-icon {
+  color: #fff;
   background-color: #fd9222;
+}
+.hero-arrow {
+  fill: currentColor;
 }
 
 /* Features section */
@@ -317,8 +355,15 @@ button {
   background-color: #1e1823;
   color: #fff;
 }
-.ingridients-item.ingridients-item:nth-child(2n) {
+.ingridients-item:nth-child(2n) {
   border-color: #fd9222;
+}
+.ingridients-icon {
+  fill: none;
+  stroke: #fff;
+}
+.ingridients-item:nth-child(2n) .ingridients-icon {
+  stroke: #fd9222;
 }
 .ingridients-pic {
 }
@@ -342,6 +387,10 @@ button {
   width: 600px;
 }
 .made-img {
+}
+.made-btn-icon {
+  fill: none;
+  stroke: #fff;
 }
 .made-right-side {
   width: 516px;
@@ -471,6 +520,8 @@ button {
   background-color: #fff;
   border-radius: 15px;
   border: 1px solid rgba(17, 17, 17, 0.1);
+
+  box-shadow: 0px 10px 100px 0px rgba(17, 17, 17, 0.03);
 }
 .reviews-avatar {
 }
@@ -540,7 +591,12 @@ button {
   margin-right: 50px;
 }
 .footer .socials-link {
+  color: #ffffff;
   border-color: rgba(255, 255, 255, 0.1);
+}
+.footer .socials-link:hover,
+.footer .socials-link:focus {
+  color: #fd9222;
 }
 .footer-address {
   font-style: normal;
@@ -587,4 +643,44 @@ button {
 .footer-menu-link:hover,
 .footer-menu-link:focus {
   color: #fd9222;
+}
+/*=====================================*\
+  #SECTION TEAM
+\*=====================================*/
+.reviews-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  margin-top: 8px;
+}
+.reviews-elem {
+  width: 60px;
+  height: 60px;
+}
+.reviews-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+
+  color: #f4f4fd;
+
+  background-color: #4d5ae5;
+  border-radius: 50%;
+}
+.reviews-link:hover,
+.reviews-link:focus {
+  background-color: #404bbf;
+}
+.reviews-icon {
+  fill: currentColor;
+}
+
+.reviews-link:hover .reviews-icon,
+.reviews-link:focus .reviews-icon {
+  fill: hotpink;
 }
