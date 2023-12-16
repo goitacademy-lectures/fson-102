@@ -122,21 +122,10 @@ button {
 }
 /* Header section */
 .header {
-  position: sticky;
-  top: -1px;
-  background-color: #fff;
-  z-index: 100;
 }
 .header-container {
   display: flex;
   align-items: center;
-
-  /* Default properties */
-  /* flex-direction: row; */
-  /* justify-content: flex-start; */
-  /* align-items: stretch; */
-  /* flex-wrap: nowrap; */
-  /* align-content: stretch; */
 }
 .header-nav {
   display: flex;
@@ -147,6 +136,7 @@ button {
 .header-logo {
   display: inline-flex;
   align-items: center;
+  gap: 4px;
 
   margin-right: 365px;
 
@@ -158,8 +148,7 @@ button {
 .header-logo-accent {
   font-style: italic;
 }
-.header-logo-img {
-  margin-left: 4px;
+.header-logo-icon {
 }
 .header-list {
   display: flex;
@@ -182,11 +171,15 @@ button {
   line-height: 1.14;
   letter-spacing: -0.02em;
 
-  transition: color 300ms ease-out 2s;
-  /* transition-property: color;
+  transition: color 300ms ease-out;
+
+  /* | Expanded properties | */
+  /*
+  transition-property: color;
   transition-duration: 300ms;
   transition-timing-function: ease-out;
-  transition-delay: 2s; */
+  transition-delay: 2s;
+  */
 }
 .header-link:hover,
 .header-link:focus {
@@ -199,7 +192,7 @@ button {
 .header-link.active::after {
   content: '';
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
 
   display: block;
   width: 100%;
@@ -267,7 +260,8 @@ button {
   border-radius: 100px;
   border: 1px solid transparent;
 
-  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out,
+    border-color 300ms ease-in-out;
 }
 .hero-btn.primary {
   background-color: #fd9222;
@@ -279,7 +273,6 @@ button {
 }
 .hero-btn.secondary {
   border-color: #fff;
-  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 .hero-btn.secondary:hover,
 .hero-btn.secondary:focus {
@@ -339,6 +332,18 @@ button {
 }
 .features-item {
   width: 308px;
+}
+.features-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 62px;
+  height: 62px;
+  margin-bottom: 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
 }
 .features-caption {
   margin-bottom: 18px;
@@ -434,9 +439,9 @@ button {
   z-index: -1;
 
   border-radius: 20px;
-  background-image: linear-gradient(hotpink, blueviolet);
+  background-image: linear-gradient(to right, #4c4c4c, #fd9222);
   transition: transform 500ms ease;
-  transition-delay: 0;
+  transition-delay: 0s;
 }
 .made-left-side:hover::after {
   transform: translateX(20px) translateY(20px);
@@ -504,10 +509,6 @@ button {
   background-color: #4c4c4c;
   border: 1px solid #eceded;
   border-radius: 50%;
-}
-
-.made-item:hover::before {
-  background-color: red;
 }
 
 /* Products section */
@@ -688,6 +689,8 @@ button {
 
   border-radius: 100px;
   border: 1px solid #fd9222;
+
+  transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
 }
 .reviews-btn:hover,
 .reviews-btn:focus {
@@ -752,6 +755,8 @@ button {
   letter-spacing: -0.02em;
   text-align: center;
   color: #fff;
+
+  transition: color 300ms ease-in-out;
 }
 .footer-address-link:hover,
 .footer-address-link:focus {
@@ -776,50 +781,12 @@ button {
   line-height: 1.14;
   letter-spacing: -0.02em;
   color: #fff;
+
+  transition: color 300ms ease-in-out;
 }
 .footer-menu-link:hover,
 .footer-menu-link:focus {
   color: #fd9222;
-}
-/*=====================================*\
-  #SECTION TEAM
-\*=====================================*/
-.reviews-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-
-  margin-top: 8px;
-}
-.reviews-elem {
-  width: 60px;
-  height: 60px;
-}
-.reviews-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  height: 100%;
-
-  color: #f4f4fd;
-
-  background-color: #4d5ae5;
-  border-radius: 50%;
-}
-.reviews-link:hover,
-.reviews-link:focus {
-  background-color: #404bbf;
-}
-.reviews-icon {
-  fill: currentColor;
-}
-
-.reviews-link:hover .reviews-icon,
-.reviews-link:focus .reviews-icon {
-  fill: hotpink;
 }
 
 /*=====================================*\
