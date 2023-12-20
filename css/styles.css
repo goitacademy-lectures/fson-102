@@ -958,11 +958,3 @@ button {
 }
 .subscribe-form-icon {
 }
-
-.form-message {
-  width: 100%;
-  resize: vertical;
-
-  min-height: 120px;
-  max-height: 180px;
-}
