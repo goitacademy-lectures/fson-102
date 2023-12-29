@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,700&family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet" />
     <!-- Normalize -->
     <link
@@ -24,7 +24,7 @@
   </head>
   <body>
     <!-- Header section -->
-    <header class="header hide" id="home">
+    <header class="header" id="home">
       <div class="header-container container">
         <nav class="header-nav">
           <a class="header-logo" href="./index.html">
@@ -33,6 +33,11 @@
               <use href="./images/sprite.svg#icon-logo"></use>
             </svg>
           </a>
+          <button class="menu-btn" type="button" aria-label="Open menu button">
+            <svg class="menu-btn-icon" width="28" height="28">
+              <use href="./images/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
           <ul class="header-list">
             <li class="header-item">
               <a class="header-link active" href="#home">Home</a>
@@ -89,7 +94,7 @@
     <!-- Unique content -->
     <main>
       <!-- Hero section -->
-      <section class="hero hide">
+      <section class="hero">
         <div class="hero-container container">
           <h1 class="hero-title">
             Treat yourself or a loved one to our finest ingredients for a moment
@@ -321,10 +326,15 @@
             <li class="products-item">
               <img
                 class="products-pic"
+                srcset="
+                  ./images/products/img-1.jpg    1x,
+                  ./images/products/img-1@2x.jpg 2x
+                "
                 src="./images/products/img-1.jpg"
                 alt=""
                 width="230"
-                height="201" />
+                height="201"
+                loading="lazy" />
               <h3 class="products-caption">Orange</h3>
               <p class="products-desc">Dark chocolate</p>
               <button class="products-btn" type="button">45 UAH</button>
@@ -332,10 +342,15 @@
             <li class="products-item">
               <img
                 class="products-pic"
+                srcset="
+                  ./images/products/img-2.jpg    1x,
+                  ./images/products/img-2@2x.jpg 2x
+                "
                 src="./images/products/img-2.jpg"
                 alt=""
                 width="230"
-                height="201" />
+                height="201"
+                loading="lazy" />
               <h3 class="products-caption">Apple&Cranberry</h3>
               <p class="products-desc">Milk chocolate</p>
               <button class="products-btn" type="button">50 UAH</button>
@@ -343,10 +358,15 @@
             <li class="products-item">
               <img
                 class="products-pic"
+                srcset="
+                  ./images/products/img-3.jpg    1x,
+                  ./images/products/img-3@2x.jpg 2x
+                "
                 src="./images/products/img-3.jpg"
                 alt=""
                 width="230"
-                height="201" />
+                height="201"
+                loading="lazy" />
               <h3 class="products-caption">Lime&Sea salt</h3>
               <p class="products-desc">Dark chocolate</p>
               <button class="products-btn" type="button">66 UAH</button>
@@ -357,7 +377,8 @@
                 src="./images/products/img-4.jpg"
                 alt=""
                 width="230"
-                height="201" />
+                height="201"
+                loading="lazy" />
               <h3 class="products-caption">Pineapple</h3>
               <p class="products-desc">Dark chocolate</p>
               <button class="products-btn" type="button">54 UAH</button>
@@ -368,7 +389,8 @@
                 src="./images/products/img-5.jpg"
                 alt=""
                 width="230"
-                height="201" />
+                height="201"
+                loading="lazy" />
               <h3 class="products-caption">Classic</h3>
               <p class="products-desc">Milk chocolate</p>
               <button class="products-btn" type="button">45 UAH</button>
@@ -379,7 +401,8 @@
                 src="./images/products/img-6.jpg"
                 alt=""
                 width="230"
-                height="201" />
+                height="201"
+                loading="lazy" />
               <h3 class="products-caption">Honey</h3>
               <p class="products-desc">Milk chocolate</p>
               <button class="products-btn" type="button">50 UAH</button>
@@ -390,7 +413,8 @@
                 src="./images/products/img-7.jpg"
                 alt=""
                 width="230"
-                height="201" />
+                height="201"
+                loading="lazy" />
               <h3 class="products-caption">Roasted fruits</h3>
               <p class="products-desc">Dark chocolate</p>
               <button class="products-btn" type="button">66 UAH</button>
@@ -401,7 +425,8 @@
                 src="./images/products/img-8.jpg"
                 alt=""
                 width="230"
-                height="201" />
+                height="201"
+                loading="lazy" />
               <h3 class="products-caption">Classic</h3>
               <p class="products-desc">White chocolate</p>
               <button class="products-btn" type="button">54 UAH</button>
@@ -418,12 +443,36 @@
           <ul class="bestsellers-list">
             <li class="bestsellers-item">
               <div class="bestsellers-wrapper">
-                <img
-                  class="bestsellers-pic"
-                  src="./images/bestsellers/img-1.jpg"
-                  alt="Chocolate with nuts"
-                  width="368"
-                  height="464" />
+                <picture>
+                  <!-- Desktop -->
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/bestsellers/img-1_desk@1x.jpg 1x,
+                      ./images/bestsellers/img-1_desk@2x.jpg 2x
+                    " />
+                  <!-- Tablet -->
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      ./images/bestsellers/img-1_tab@1x.jpg 1x,
+                      ./images/bestsellers/img-1_tab@2x.jpg 2x
+                    " />
+                  <!-- Mobile -->
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      ./images/bestsellers/img-1_mob@1x.jpg 1x,
+                      ./images/bestsellers/img-1_mob@2x.jpg 2x
+                    " />
+                  <img
+                    class="bestsellers-pic"
+                    src="./images/bestsellers/img-1.jpg"
+                    alt="Chocolate with nuts"
+                    width="368"
+                    height="464"
+                    loading="lazy" />
+                </picture>
 
                 <p class="overlay">
                   Chocolate with fruit is an unbeatable combination of two of
@@ -442,7 +491,8 @@
                   src="./images/bestsellers/img-2.jpg"
                   alt="Chocolate with fruits"
                   width="368"
-                  height="464" />
+                  height="464"
+                  loading="lazy" />
                 <p class="overlay">
                   Chocolate with fruit is an unbeatable combination of two of
                   the tastiest things in the world. This dessert combines
@@ -459,7 +509,8 @@
                   src="./images/bestsellers/img-3.jpg"
                   alt="Dark chocolate"
                   width="368"
-                  height="464" />
+                  height="464"
+                  loading="lazy" />
                 <p class="overlay">
                   Chocolate with fruit is an unbeatable combination of two of
                   the tastiest things in the world. This dessert combines
@@ -613,9 +664,88 @@
               <input
                 class="subscribe-form-input"
                 type="email"
+                name="subscribe_email"
                 placeholder="Enter your email" />
             </label>
             <button class="subscribe-form-btn" type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </footer>
+
+    <footer class="web-footer">
+      <div class="web-footer-container container">
+        <div class="web-footer-top">
+          <a class="web-footer-logo" href=""><span>Web</span>Studio</a>
+          <p class="web-footer-desc">
+            Increase the flow of customers and sales for your business with
+            digital marketing & growth solutions.
+          </p>
+        </div>
+
+        <div class="web-footer-mid">
+          <p class="web-footer-caption">Social media</p>
+          <ul class="mobile-menu-socials socials">
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook site">
+                <svg class="socials-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram site">
+                <svg class="socials-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="https://twitter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter site">
+                <svg class="socials-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials-item">
+              <a
+                class="socials-link"
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook site">
+                <svg class="socials-icon" width="24" height="24">
+                  <use href="./images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="web-footer-bottom">
+          <p class="web-footer-caption">Subscribe</p>
+          <form class="web-footer-form">
+            <label class="web-footer-label">
+              <input
+                class="web-footer-input"
+                type="email"
+                placeholder="E-mail" />
+            </label>
+            <button class="web-footer-btn" type="submit">Subscribe</button>
           </form>
         </div>
       </div>
@@ -654,13 +784,13 @@
             </div>
           </div>
           <div class="form-wrapper">
-            <label class="form-label" for="user_name">Email</label>
+            <label class="form-label" for="user_email">Email</label>
             <div class="form-field">
               <input
                 class="form-input"
                 type="email"
-                id="user_name"
-                name="user_name"
+                id="user_email"
+                name="user_email"
                 required
                 placeholder="&nbsp;" />
               <svg class="form-icon" width="24" height="24">
@@ -669,13 +799,13 @@
             </div>
           </div>
           <div class="form-wrapper">
-            <label class="form-label" for="user_name">Phone number</label>
+            <label class="form-label" for="user_phone">Phone number</label>
             <div class="form-field">
               <input
                 class="form-input"
                 type="tel"
-                id="user_name"
-                name="user_name"
+                id="user_phone"
+                name="user_phone"
                 maxlength="12" />
               <svg class="form-icon" width="24" height="24">
                 <use href="./images/sprite.svg#icon-phone"></use>
@@ -710,6 +840,92 @@
 
           <button class="form-btn" type="submit" disabled>Send</button>
         </form>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="mobile-menu">
+      <button class="menu-btn" type="button">
+        <svg class="menu-btn-icon" width="8" height="8">
+          <use href="./images/sprite.svg#icon-menu-x"></use>
+        </svg>
+      </button>
+
+      <ul class="mobile-menu-list">
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link current" href="">Studio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Portfolio</a>
+        </li>
+        <li class="mobile-menu-item">
+          <a class="mobile-menu-link" href="">Contacts</a>
+        </li>
+      </ul>
+
+      <div class="mobile-menu-wrapper">
+        <ul class="mobile-menu-contacts">
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-contact accent" href="tel:+110001111111"
+              >+11 (000) 111-11-11</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a class="mobile-menu-contact" href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="mobile-menu-socials socials">
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook site">
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram site">
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter site">
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="socials-item">
+            <a
+              class="socials-link"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook site">
+              <svg class="socials-icon" width="24" height="24">
+                <use href="./images/sprite.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
       </div>
     </div>
   </body>
